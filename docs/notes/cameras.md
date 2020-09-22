@@ -11,6 +11,7 @@ When working with 3D data, there are 4 coordinate systems users need to know
 * **World coordinate system**
 This is the system the object/scene lives - the world.
 * **Camera view coordinate system**
+* **相机坐标系**
 This is the system that has its origin on the image plane and the `Z`-axis perpendicular to the image plane. In PyTorch3D, we assume that `+X` points left, and `+Y` points up and `+Z` points out from the image plane. The transformation from world to view happens after applying a rotation (`R`) and translation (`T`).
 * **NDC coordinate system**
 This is the normalized coordinate system that confines in a volume the renderered part of the object/scene. Also known as view volume. Under the PyTorch3D convention, `(+1, +1, znear)` is the top left near corner, and `(-1, -1, zfar)` is the bottom right far corner of the volume. The transformation from view to NDC happens after applying the camera projection matrix (`P`).
